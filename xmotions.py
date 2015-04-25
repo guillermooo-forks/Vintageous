@@ -72,9 +72,7 @@ class _vi_find_in_line(ViMotionCommand):
                 # Define search range as 'rest of the line to the right'.
                 search_range = sublime.Region(match.end(), eol)
                 match = find_in_range(view, char,
-                                            search_range.a,
-                                            search_range.b,
-                                            sublime.LITERAL)
+                        search_range.a, search_range.b, sublime.LITERAL)
 
                 # Count too high or simply no match; break.
                 if match is None:
